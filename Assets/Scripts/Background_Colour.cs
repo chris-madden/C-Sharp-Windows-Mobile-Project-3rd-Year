@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Background_Colour : MonoBehaviour {
 
-    public Renderer background;
-
 	// Use this for initialization
 	void Start () {
+
+        Renderer background;
 
         background = GetComponent<Renderer>();
 
@@ -19,17 +19,4 @@ public class Background_Colour : MonoBehaviour {
 	
 	}
 
-    //public void printOut()
-    //{
-
-    //    Debug.Log("Button has executed");
-
-    //}
-
-    //public void yellowBackground()
-    //{
-    //    background = GetComponent<Renderer>();
-
-    //    background.material.color = Color.yellow;
-    //}
 }
