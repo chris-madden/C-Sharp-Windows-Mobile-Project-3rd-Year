@@ -19,17 +19,17 @@ public class Background_Colour : MonoBehaviour {
 	
 	}
 
-    public void printOut()
-    {
+    //public void printOut()
+    //{
 
-        Debug.Log("Button has executed");
+    //    Debug.Log("Button has executed");
 
-    }
+    //}
 
-    public void yellowBackground()
-    {
-        background = GetComponent<Renderer>();
+    //public void yellowBackground()
+    //{
+    //    background = GetComponent<Renderer>();
 
-        background.material.color = Color.yellow;
-    }
+    //    background.material.color = Color.yellow;
+    //}
 }
