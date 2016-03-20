@@ -18,4 +18,18 @@ public class Background_Colour : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void printOut()
+    {
+
+        Debug.Log("Button has executed");
+
+    }
+
+    public void yellowBackground()
+    {
+        background = GetComponent<Renderer>();
+
+        background.material.color = Color.yellow;
+    }
 }
