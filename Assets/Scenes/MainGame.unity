@@ -395,6 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy3: {fileID: 149354, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+  destroyEnemy: 10
   spawnTime: 1
 --- !u!1 &995422144 stripped
 GameObject:
