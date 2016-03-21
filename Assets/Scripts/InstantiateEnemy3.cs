@@ -17,7 +17,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
 	void Start () {
 
         // Wait 20 seconds for new enemy to spawn
-        InvokeRepeating("spawnEnemy3", spawnTime, 20f);
+        InvokeRepeating("spawnEnemy3", spawnTime, 4f);
 
         enemyPos = new Vector3(0, 2, 0);
 
@@ -38,17 +38,5 @@ public class InstantiateEnemy3 : MonoBehaviour {
         Destroy(enemy3Clone, destroyEnemy);
 
     }// End spawnEnemy3
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "goodMissile")
-        {
-
-            // If hit by missile destroy object
-            Destroy(GameObject.Find("enemy"));
-        }
-
-    }// End 
-
 
 }
