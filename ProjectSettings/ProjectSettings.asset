@@ -333,11 +333,11 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   metroPackageName: Game_Windows_Mobile
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 8011af2695a2d201
   metroApplicationDescription: Game_Windows_Mobile
   wsaImages: {}
   metroTileShortName: 

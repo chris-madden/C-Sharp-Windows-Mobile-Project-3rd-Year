@@ -32,8 +32,8 @@ public class InstantiateEnemy3 : MonoBehaviour {
     void spawnEnemy3()
     {
 
-        // X position can range from -4 t0 4, will always appear within camera view
-        float xPos = Random.Range(-4, 4);
+        // X position can range from -3 t0 3, will always appear within camera view
+        float xPos = Random.Range(-2, 2);
 
         // Y position can range from 4 to 7, will instantiate off screen but not too far
         float yPos = Random.Range(6, 8);
