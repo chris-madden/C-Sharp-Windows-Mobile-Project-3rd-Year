@@ -159,6 +159,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1001 &235981927
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 154634, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 149354, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &637410298
 Prefab:
   m_ObjectHideFlags: 0
@@ -398,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 187122, guid: 270f16cf98d38dd45b3dca256088b0af, type: 2}
-  rocketPos: {fileID: 410472, guid: 270f16cf98d38dd45b3dca256088b0af, type: 2}
+  destroyMissile: 2
 --- !u!114 &995422147
 MonoBehaviour:
   m_ObjectHideFlags: 0
