@@ -8,15 +8,18 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
     Vector3 enemyPos;
 
+    public float destroyEnemy = 10;
+
     // Time to wait until next enemy is spawned
-    public float spawnTime = 1;
+    public float spawnTime = 10f;
 
 	// Use this for initialization
 	void Start () {
 
-        InvokeRepeating("spawnEnemy3", spawnTime, spawnTime);
+        // Wait 20 seconds for new enemy to spawn
+        InvokeRepeating("spawnEnemy3", spawnTime, 20f);
 
-        enemyPos = new Vector3(2, 2, 0);
+        enemyPos = new Vector3(0, 2, 0);
 
     }
 	
@@ -27,11 +30,25 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
     void spawnEnemy3()
     {
-
+       
         // Spawn enemy at a certain position and store in a clone
         var enemy3Clone = GameObject.Instantiate(enemy3, enemyPos, Quaternion.identity);
 
-        // Will destroy object if it leaves camera view
+        // Will destroy object after certain amount of time
+        Destroy(enemy3Clone, destroyEnemy);
 
     }// End spawnEnemy3
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "goodMissile")
+        {
+
+            // If hit by missile destroy object
+            Destroy(GameObject.Find("enemy"));
+        }
+
+    }// End 
+
+
 }

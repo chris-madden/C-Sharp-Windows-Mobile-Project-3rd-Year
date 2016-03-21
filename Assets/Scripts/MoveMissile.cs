@@ -18,4 +18,16 @@ public class MoveMissile : MonoBehaviour {
         transform.position += transform.up * Time.deltaTime * speed;
 	
 	}
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "enemy")
+        {
+            Debug.Log("Missile hit enemy!");
+
+            Destroy(this.gameObject);
+        }
+            
+
+    }
 }

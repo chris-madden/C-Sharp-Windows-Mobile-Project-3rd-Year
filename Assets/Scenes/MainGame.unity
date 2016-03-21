@@ -97,7 +97,7 @@ GameObject:
   - 23: {fileID: 227538245}
   - 114: {fileID: 227538244}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Quad_Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,56 +159,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!1001 &235981927
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 418764, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 154634, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_Layer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 149354, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-      propertyPath: m_Layer
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &637410298
 Prefab:
   m_ObjectHideFlags: 0
@@ -358,6 +308,7 @@ GameObject:
   - 92: {fileID: 973624817}
   - 124: {fileID: 973624816}
   - 81: {fileID: 973624815}
+  - 114: {fileID: 973624820}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -432,6 +383,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &973624820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973624814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11e40e9c36d5ad4386fa88f0fa74c0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy3: {fileID: 149354, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
+  spawnTime: 1
 --- !u!1 &995422144 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
@@ -461,6 +425,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!60 &995422149
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995422144}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.715, y: -0.45999998}
+      - {x: 0.815, y: -0.44}
+      - {x: 0.85499996, y: -0.39999998}
+      - {x: 0.85499996, y: -0.29999998}
+      - {x: 0.415, y: 0.14999999}
+      - {x: 0.305, y: 0.32}
+      - {x: 0.195, y: 0.42999998}
+      - {x: 0.114999995, y: 0.47}
+      - {x: -0.145, y: 0.47}
+      - {x: -0.195, y: 0.45}
+      - {x: -0.315, y: 0.31}
+      - {x: -0.445, y: 0.11}
+      - {x: -0.85499996, y: -0.26999998}
+      - {x: -0.85499996, y: -0.44}
+      - {x: -0.815, y: -0.47}
+      - {x: -0.745, y: -0.47}
+      - {x: -0.59499997, y: -0.41}
+      - {x: -0.265, y: -0.22999999}
+      - {x: -0.195, y: -0.31}
+      - {x: -0.024999999, y: -0.47}
+      - {x: 0.065, y: -0.47}
+      - {x: 0.205, y: -0.32}
+      - {x: 0.265, y: -0.24}
+      - {x: 0.525, y: -0.35}
 --- !u!1 &1110549698
 GameObject:
   m_ObjectHideFlags: 0
