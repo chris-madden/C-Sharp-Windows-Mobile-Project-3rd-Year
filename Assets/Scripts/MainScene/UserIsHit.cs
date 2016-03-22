@@ -9,7 +9,7 @@ public class UserIsHit : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        // Store high score
+        // Store high score for comparison
         highScore = PlayerPrefs.GetInt("High Score");
 
     }
