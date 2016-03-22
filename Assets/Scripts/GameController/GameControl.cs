@@ -24,7 +24,7 @@ public class GameControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
     // Adds to current score and updates it in the UI
@@ -52,4 +52,5 @@ public class GameControl : MonoBehaviour {
     {
         missileAmount.text = "Missiles: " + GameControl.numOfMissiles;
     }
+
 }

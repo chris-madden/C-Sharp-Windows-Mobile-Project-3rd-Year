@@ -16,11 +16,12 @@ public class DisplayHighScore : MonoBehaviour {
 
         // Show high score in UI
         highScoreText.text = highScore.ToString();
-	
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-}
+
+}// End DisplayHighScore

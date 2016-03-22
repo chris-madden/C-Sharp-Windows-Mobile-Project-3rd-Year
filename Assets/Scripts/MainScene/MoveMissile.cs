@@ -23,8 +23,7 @@ public class MoveMissile : MonoBehaviour {
     {
         if (coll.gameObject.tag == "enemy")
         {
-            Debug.Log("Missile hit enemy!");
-
+           
             Destroy(this.gameObject);
         }
             
