@@ -6,6 +6,7 @@ public class FireMissile : MonoBehaviour {
     // Represents the missile prefab
     public GameObject missile;
 
+    // Get variable of type GameControl script
     private GameControl gc;
 
     // Time until missile is destroyed
