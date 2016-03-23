@@ -16,7 +16,7 @@ public class GameControl : MonoBehaviour {
         numOfMissiles = 50;
 
         // UI text
-        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("High Score");
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("Score9");
         UpdateMissiles();
         UpdateScore();
 

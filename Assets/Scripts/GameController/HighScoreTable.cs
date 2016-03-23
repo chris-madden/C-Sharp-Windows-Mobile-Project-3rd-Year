@@ -4,24 +4,13 @@ using System;
 
 public class HighScoreTable : MonoBehaviour {
 
-    // **************************************
-    //  Scores stored in string "Score" + num
-    // ************************************** 
-
+    // Array which will hold the high scores
     public static int[] saveHighScores = new int[10];
 
     private int firstGo = 0;
 
     // Use this for initialization
     void Start () {
-
-        //for (int i = 0; i < testArray.Length; i++)
-        //{
-
-        //    //Save the new high scores to disk
-        //    PlayerPrefs.DeleteKey("TestScore" + i);
-
-        //}
 
         // Load the variable FirstPlay
         firstGo = PlayerPrefs.GetInt("FirstPlay");
@@ -32,6 +21,7 @@ public class HighScoreTable : MonoBehaviour {
 
             var temp = 10;
 
+            // Loop through and write 10 artifical scores to disk
             for (int i = 0; i < saveHighScores.Length; i++)
             {
 
@@ -42,15 +32,17 @@ public class HighScoreTable : MonoBehaviour {
 
             }
 
+            // Set firstGo so it will only work once
             firstGo = 1;
 
+            // Save the variable to disk
             PlayerPrefs.SetInt("FirstPlay", firstGo);
 
             PlayerPrefs.Save();
 
         }
 
-        //// Taking scores from disk
+        // Taking scores from disk
         loadHighScores();
 
     }// End Start
@@ -104,22 +96,5 @@ public class HighScoreTable : MonoBehaviour {
         }// End for
 
     }// End onDeathHighScore
-
-    // If the device has no high scores stored then create them 
-    //public void createHighScores()
-    //{
-
-    //    var temp = 10;
-
-    //    for (int i = 0; i < saveHighScores.Length; i++)
-    //    {
-
-    //        saveHighScores[i] = temp;
-
-    //        temp += 10;
-
-    //    }
-
-    //}
 
 }// End class HighScoreTable

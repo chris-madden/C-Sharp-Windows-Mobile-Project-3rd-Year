@@ -7,6 +7,7 @@ public class ReloadGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        // Code used for testing local storage on device that had scored saved from a previous build
         //PlayerPrefs.DeleteAll();
 
     }
