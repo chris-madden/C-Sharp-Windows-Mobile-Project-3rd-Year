@@ -16,6 +16,14 @@ public class MoveMissile : MonoBehaviour {
 
         // Missile shoud move up once instantiated
         transform.position += transform.up * Time.deltaTime * speed;
+
+        // If missile goes off screen then destroy it
+        if (transform.position.y > 5)
+        {
+
+            Destroy(this.gameObject);
+
+        }
 	
 	}
 

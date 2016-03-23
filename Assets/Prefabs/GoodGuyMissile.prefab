@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21294888}
   - 114: {fileID: 11496368}
   - 60: {fileID: 6093828}
-  m_Layer: 1
+  m_Layer: 11
   m_Name: GoodGuyMissile
   m_TagString: goodMissile
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 1
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass

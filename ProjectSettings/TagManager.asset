@@ -15,10 +15,10 @@ TagManager:
   - UI
   - 
   - 
-  - GameObjects
-  - 
-  - 
-  - 
+  - GoodGuy
+  - EnemyObjects
+  - CollectMissilesLayer
+  - GoodMissiles
   - 
   - 
   - 

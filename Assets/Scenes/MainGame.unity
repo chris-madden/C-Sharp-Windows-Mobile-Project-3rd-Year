@@ -278,6 +278,10 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
   m_IsPrefabParent: 0
@@ -418,7 +422,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 973624814}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db31f8ce55291d0479e67d218cccac63, type: 3}
   m_Name: 
@@ -437,7 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   extramissiles: {fileID: 192522, guid: eb89806c64ff4b64fa4b21d2508decb5, type: 2}
   destroyExtraMissile: 5
-  spawnTime: 2
+  spawnTime: 10
   nextSpawn: 2
 --- !u!1 &995422144 stripped
 GameObject:

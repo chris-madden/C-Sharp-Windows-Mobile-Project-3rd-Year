@@ -7,7 +7,7 @@ public class ReloadGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-       
+        //PlayerPrefs.DeleteAll();
 
     }
 	

@@ -8,25 +8,20 @@ public class HighScoreTable : MonoBehaviour {
     //  Scores stored in string "Score" + num
     // ************************************** 
 
-    // Arraylist which stores 10 scores
-    public static ArrayList storeHighScores = new ArrayList(10);
-
     public static int[] saveHighScores = new int[10];
-
-    public int[] testArray = new int[5];
 
     private int firstGo = 0;
 
     // Use this for initialization
     void Start () {
 
-        for (int i = 0; i < testArray.Length; i++)
-        {
+        //for (int i = 0; i < testArray.Length; i++)
+        //{
 
-            //Save the new high scores to disk
-            PlayerPrefs.DeleteKey("TestScore" + i);
+        //    //Save the new high scores to disk
+        //    PlayerPrefs.DeleteKey("TestScore" + i);
 
-        }
+        //}
 
         // Load the variable FirstPlay
         firstGo = PlayerPrefs.GetInt("FirstPlay");
@@ -55,7 +50,7 @@ public class HighScoreTable : MonoBehaviour {
 
         }
 
-        // Taking scores from disk
+        //// Taking scores from disk
         loadHighScores();
 
     }// End Start
@@ -91,9 +86,6 @@ public class HighScoreTable : MonoBehaviour {
 
         // Using normal array
         saveHighScores[0] = newHighScore;
-
-        // sort the array 
-        //storeHighScores.Sort();
 
         //=======================================
         //using normal array

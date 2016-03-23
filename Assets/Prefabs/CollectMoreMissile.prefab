@@ -13,7 +13,7 @@ GameObject:
   - 60: {fileID: 6010012}
   - 50: {fileID: 5060742}
   - 114: {fileID: 11477704}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CollectMoreMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,6 +179,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
