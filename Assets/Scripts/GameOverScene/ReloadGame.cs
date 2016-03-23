@@ -21,6 +21,13 @@ public class ReloadGame : MonoBehaviour {
         SceneManager.LoadScene("MainGame");
     }
 
+    public void highScoresScene()
+    {
+
+        SceneManager.LoadScene("TopScores");
+
+    }
+
     public void quitGame()
     {
 

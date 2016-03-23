@@ -13,39 +13,60 @@ public class HighScoreTable : MonoBehaviour {
 
     public static int[] saveHighScores = new int[10];
 
-    private int capacity = 10;
+    public int[] testArray = new int[5];
+
+    private int firstGo = 0;
 
     // Use this for initialization
     void Start () {
 
+        for (int i = 0; i < testArray.Length; i++)
+        {
+
+            //Save the new high scores to disk
+            PlayerPrefs.DeleteKey("TestScore" + i);
+
+        }
+
+        // Load the variable FirstPlay
+        firstGo = PlayerPrefs.GetInt("FirstPlay");
+
+        // If no high scores present then write to disk
+        if (firstGo == 0)
+        {
+
+            var temp = 10;
+
+            for (int i = 0; i < saveHighScores.Length; i++)
+            {
+
+                //Save the new high scores to disk
+                PlayerPrefs.SetInt("Score" + i, temp);
+
+                temp += 10;
+
+            }
+
+            firstGo = 1;
+
+            PlayerPrefs.SetInt("FirstPlay", firstGo);
+
+            PlayerPrefs.Save();
+
+        }
+
         // Taking scores from disk
         loadHighScores();
 
-        // Taking scores from array
-        //printScores();
-
-    }
+    }// End Start
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
-    //void printScores()
-    //{
-
-    //    // Loop through array and print scores
-    //    for (int i = 0; i < storeHighScores.Count; i++)
-    //    {
-
-    //        Debug.Log(storeHighScores[i]);
-
-    //    }// End for
-
-    //}// End printScores
-
     // Takes high scores off disk and stores in an array list
-    void loadHighScores()
+    public void loadHighScores()
     {
 
         // Temp variable for each score
@@ -58,10 +79,6 @@ public class HighScoreTable : MonoBehaviour {
             // Get score off disk and store in temp variable
             tempScore = PlayerPrefs.GetInt("Score" + i);
 
-            // Store score into array list
-            //storeHighScores.Add(tempScore);
-
-            //===================================================
             // Save into normal array
             saveHighScores[i] = tempScore;
 
@@ -72,11 +89,6 @@ public class HighScoreTable : MonoBehaviour {
     public void onDeathHighScore(int newHighScore)
     {
 
-        // Replace smallest highscore with new higher score
-        // MIGHT NOT BE OVERWRITING JUST MOVING EACH NODE UP THE WAY
-        //storeHighScores.Insert(0, newHighScore);
-
-        //======================================
         // Using normal array
         saveHighScores[0] = newHighScore;
 
@@ -91,30 +103,31 @@ public class HighScoreTable : MonoBehaviour {
         for (int i = 0; i < saveHighScores.Length; i++)
         {
 
-            // Store array list about as an int to a temp variable
-            //var tempScore = (int)storeHighScores[i];
-
-            //=====================================================
             // Using normal array
             var normalTemp = saveHighScores[i];
 
             // Save the new high scores to disk
             PlayerPrefs.SetInt("Score" + i, normalTemp);
 
-        }
-
-
-        // display new high score table
-        for (int i = 0; i < saveHighScores.Length; i++)
-        {
-
-            //Debug.Log(storeHighScores[i]);
-
-            Debug.Log(saveHighScores[i]);
-
         }// End for
 
-
     }// End onDeathHighScore
+
+    // If the device has no high scores stored then create them 
+    //public void createHighScores()
+    //{
+
+    //    var temp = 10;
+
+    //    for (int i = 0; i < saveHighScores.Length; i++)
+    //    {
+
+    //        saveHighScores[i] = temp;
+
+    //        temp += 10;
+
+    //    }
+
+    //}
 
 }// End class HighScoreTable

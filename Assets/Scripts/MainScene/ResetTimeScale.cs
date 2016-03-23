@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ResetTimeScale : MonoBehaviour {
 
+ 
 	// Use this for initialization
 	void Start () {
 
-        // Reset time when game is reloaded
-        Time.timeScale = 1;
 
 	}
 	
@@ -15,4 +15,5 @@ public class ResetTimeScale : MonoBehaviour {
 	void Update () {
 	
 	}
+
 }
