@@ -297,6 +297,7 @@ GameObject:
   - 114: {fileID: 973624821}
   - 114: {fileID: 973624822}
   - 114: {fileID: 973624823}
+  - 114: {fileID: 973624824}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -423,6 +424,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testArray: 0000000000000000000000000000000000000000
+--- !u!114 &973624824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973624814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbbc718e075bb5419418cbc43fdfeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extramissiles: {fileID: 192522, guid: eb89806c64ff4b64fa4b21d2508decb5, type: 2}
+  destroyExtraMissile: 5
+  spawnTime: 2
+  nextSpawn: 2
 --- !u!1 &995422144 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
