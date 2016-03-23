@@ -11,9 +11,9 @@ public class InstantiateExtraMissiles : MonoBehaviour {
     public float destroyExtraMissile = 5;
 
     // Time to wait until next missile is spawned
-    public float spawnTime = 10f;
+    public int spawnTime = 10;
 
-    public float nextSpawn = 5f;
+    public float nextSpawn = 20f;
 
     // Use this for initialization
     void Start () {

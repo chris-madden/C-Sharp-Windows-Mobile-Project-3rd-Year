@@ -12,7 +12,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
     public float destroyEnemy = 10;
 
     // Time to wait until next enemy is spawned
-    public float spawnTime = 10f;
+    public int spawnTime = 1;
 
     public float nextSpawn = 2f;
 
