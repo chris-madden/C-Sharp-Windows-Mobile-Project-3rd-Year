@@ -12,7 +12,7 @@ public class DisplayHighScore : MonoBehaviour {
 	void Start () {
 
         // Store high score in variable
-        highScore = PlayerPrefs.GetInt("High Score");
+        highScore = PlayerPrefs.GetInt("Score9");
 
         // Show high score in UI
         highScoreText.text = highScore.ToString();

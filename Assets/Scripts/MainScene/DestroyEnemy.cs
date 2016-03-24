@@ -16,7 +16,6 @@ public class DestroyEnemy : MonoBehaviour {
         // Get reference to to script
         gc = camera.GetComponent<GameControl>();
 
-      
     }
 	
 	// Update is called once per frame
@@ -27,16 +26,18 @@ public class DestroyEnemy : MonoBehaviour {
     // Enemy will be destroyed on impact with missile
     void OnCollisionEnter2D(Collision2D coll)
     {
+       
         if (coll.gameObject.tag == "goodMissile")
         {
-
+  
             // When enemy is hit and destroyed add the points to the enemy score
             gc.AddScore(enemyScore);
 
             // If hit by missile destroy object
             Destroy(this.gameObject);
 
-        }
+        }// End if
 
-    }// End 
-}
+    }// End OnCollisionEnter2D
+
+}// End class DestroyEnemy

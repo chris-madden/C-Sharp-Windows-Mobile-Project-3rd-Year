@@ -18,7 +18,6 @@ public class MoveEnemy3 : MonoBehaviour {
         // Missile shoud move up once instantiated
         transform.position += transform.up * Time.deltaTime * (speed / 2);
 
-
         // Enemy behaviour
         if (transform.position.x >= -2 && hitLeft == false)
         {
@@ -26,14 +25,11 @@ public class MoveEnemy3 : MonoBehaviour {
             // Enemy moves to it's right (Players left)
             transform.position += transform.right * Time.deltaTime * (speed / 2);
 
-            //Debug.Log("X pos is: " + transform.position.x);
-
-            //// If left side is hit
+            // If left side is hit
             if (transform.position.x < -2)
             {
 
                 hitLeft = true;
-
 
             }
 
@@ -42,8 +38,6 @@ public class MoveEnemy3 : MonoBehaviour {
         if (transform.position.x <= 2 && hitLeft == true)
         {
 
-           // Debug.Log("X pos is: " + transform.position.x);
-
             // Enemy moves to its left (Players right)
             transform.position += (-transform.right) * Time.deltaTime * (speed / 2);
 
@@ -51,8 +45,6 @@ public class MoveEnemy3 : MonoBehaviour {
             {
 
                 hitLeft = false;
-
-                Debug.Log("Player has hit right side");
 
             }
 
