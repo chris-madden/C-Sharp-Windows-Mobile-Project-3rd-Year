@@ -11,6 +11,10 @@ Publisher
 =========
 GamerYou
 
+Explosion found at
+==================
+http://gintasdx.deviantart.com/art/Explosion-spritesheet-for-games-347785133
+
 Audio Reference
 ===============
 
@@ -21,4 +25,13 @@ Dustyroom Game Studio
 Found at
 =========
 https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=relevance/query=casual&game&sounds
+
+
+Music by
+========
+Vertex Studio
+
+Found at
+========
+https://www.assetstore.unity3d.com/en/#!/content/4883
 
