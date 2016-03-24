@@ -28,6 +28,7 @@ public class ShareToMedia : MonoBehaviour {
 
         // Send message to twitter
         Application.OpenURL("https://twitter.com/intent/tweet?text=" + message);
+        //System.Diagnostics.Process.Start("notepad.exe");
 
     }
 }
