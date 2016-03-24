@@ -152,7 +152,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ca4926b54cc952d42badb2179f6e8643, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDeathSound: {fileID: 8300000, guid: ca4926b54cc952d42badb2179f6e8643, type: 3}
+  explosion: {fileID: 158170, guid: dfae7f8418b69864bbd14b5adc30f3ca, type: 2}
 --- !u!114 &11426730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -384,13 +385,25 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: ca4926b54cc952d42badb2179f6e8643, type: 3}
     - target: {fileID: 0}
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 158170, guid: dfae7f8418b69864bbd14b5adc30f3ca, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Pan2D
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

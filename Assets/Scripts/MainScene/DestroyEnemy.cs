@@ -8,6 +8,9 @@ public class DestroyEnemy : MonoBehaviour {
     public AudioClip enemyDeathSound;
     private AudioSource source;
 
+    // Will create explosion when enemy is hit
+    public GameObject explosion;
+
 
     // Varibales for score
     private GameControl gc;
@@ -24,6 +27,9 @@ public class DestroyEnemy : MonoBehaviour {
 
         // Get reference to to Audio source
         source = GetComponent<AudioSource>();
+
+        // Set volume of explosion
+        //source.volume = 0.1f;
 
     }
 	
@@ -44,6 +50,12 @@ public class DestroyEnemy : MonoBehaviour {
 
             // If hit by missile destroy object
             Destroy(this.gameObject);
+
+            // Clone the explosion object at the position where the enemy is hit with the missile
+            GameObject cloneExplosion = (GameObject)Instantiate(explosion, transform.position, Quaternion.identity);
+
+            // Destroy the explosion after half a second
+            Destroy(cloneExplosion, 0.05f);
 
             if (enemyDeathSound)
             {
