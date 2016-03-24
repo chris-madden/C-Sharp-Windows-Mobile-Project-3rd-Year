@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 public class DestroyEnemy : MonoBehaviour {
 
+    // Variables for audio
+    public AudioClip enemyDeathSound;
+    private AudioSource source;
+
+
+    // Varibales for score
     private GameControl gc;
     private int enemyScore = 10;
 
@@ -15,6 +21,9 @@ public class DestroyEnemy : MonoBehaviour {
 
         // Get reference to to script
         gc = camera.GetComponent<GameControl>();
+
+        // Get reference to to Audio source
+        source = GetComponent<AudioSource>();
 
     }
 	
@@ -29,12 +38,20 @@ public class DestroyEnemy : MonoBehaviour {
        
         if (coll.gameObject.tag == "goodMissile")
         {
-  
+
             // When enemy is hit and destroyed add the points to the enemy score
             gc.AddScore(enemyScore);
 
             // If hit by missile destroy object
             Destroy(this.gameObject);
+
+            if (enemyDeathSound)
+            {
+
+                // Play audio clip at the postiton the object is destroyed
+                AudioSource.PlayClipAtPoint(enemyDeathSound, transform.position);
+
+            }
 
         }// End if
 
