@@ -12,22 +12,24 @@ public class InstantiateEnemy3 : MonoBehaviour {
     public float destroyEnemy = 10;
 
     // Time to wait until next enemy is spawned
-    public int spawnTime = 1;
+    public float spawnTime = 1f;
 
-    public float nextSpawn = 2f;
+    public static float nextSpawn = 2f;
 
     // Use this for initialization
     void Start () {
 
         // Keep spawning enemy 
-        InvokeRepeating("spawnEnemy3", spawnTime, nextSpawn);
+        //InvokeRepeating("spawnEnemy3", spawnTime, nextSpawn);
+
+        StartCoroutine(enemySpawn(nextSpawn));
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+
+    }
 
     void spawnEnemy3()
     {
@@ -50,4 +52,40 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
     }// End spawnEnemy3
 
-}
+    // Used to control how quickly enemies will spawn as players score gets higher
+    IEnumerator enemySpawn(float nextSpawn)
+    {
+        while (true)
+        {
+
+            if (GameControl.score > 50)
+            {
+
+                nextSpawn = 1f;
+
+            }
+
+            if (GameControl.score > 100)
+            {
+
+                nextSpawn = 0.5f;
+
+            }
+
+            if (GameControl.score > 150)
+            {
+
+                nextSpawn = 0.25f;
+
+            }
+
+            // Call method to spawn enemy at random positions
+            spawnEnemy3();
+
+            // Wait for certain number of seconds
+            yield return new WaitForSeconds(nextSpawn);
+        }
+
+    }// End enemySpawn
+
+}// End class InstantiateEnemy3

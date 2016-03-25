@@ -6,11 +6,9 @@ public class DestroyEnemy : MonoBehaviour {
 
     // Variables for audio
     public AudioClip enemyDeathSound;
-    private AudioSource source;
-
+  
     // Will create explosion when enemy is hit
     public GameObject explosion;
-
 
     // Varibales for score
     private GameControl gc;
@@ -24,9 +22,6 @@ public class DestroyEnemy : MonoBehaviour {
 
         // Get reference to to script
         gc = camera.GetComponent<GameControl>();
-
-        // Get reference to to Audio source
-        source = GetComponent<AudioSource>();
 
         // Set volume of explosion
         //source.volume = 0.1f;

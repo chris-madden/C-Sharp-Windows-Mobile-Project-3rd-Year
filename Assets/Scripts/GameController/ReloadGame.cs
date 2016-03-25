@@ -19,6 +19,8 @@ public class ReloadGame : MonoBehaviour {
 
     public void reloadGame()
     {
+        GameControl.score = 0;
+
         SceneManager.LoadScene("MainGame");
     }
 
