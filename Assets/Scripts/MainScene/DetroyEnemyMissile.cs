@@ -3,6 +3,9 @@ using System.Collections;
 
 public class DetroyEnemyMissile : MonoBehaviour {
 
+    // Variables for audio
+    public AudioClip enemyDeathSound;
+
     public GameObject explosionSmall;
 
 	// Use this for initialization
@@ -31,13 +34,13 @@ public class DetroyEnemyMissile : MonoBehaviour {
             // Destroy the explosion after half a second
             Destroy(cloneExplosion, 0.05f);
 
-            //if (enemyDeathSound)
-            //{
+            if (enemyDeathSound)
+            {
 
-            //    // Play audio clip at the postiton the object is destroyed
-            //    AudioSource.PlayClipAtPoint(enemyDeathSound, transform.position);
+                // Play audio clip at the postiton the object is destroyed
+                AudioSource.PlayClipAtPoint(enemyDeathSound, transform.position);
 
-            //}
+            }
 
         }// End if
 
