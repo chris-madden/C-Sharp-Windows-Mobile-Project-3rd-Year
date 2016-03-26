@@ -7,6 +7,8 @@ public class CollectExtraMissile : MonoBehaviour {
 
     public int extraMissiles = 10;
 
+    public AudioClip collectMissile;
+
     // Use this for initialization
     void Start () {
 
@@ -34,6 +36,13 @@ public class CollectExtraMissile : MonoBehaviour {
 
             // If hit by missile destroy object
             Destroy(this.gameObject);
+
+            if (collectMissile)
+            {
+
+                AudioSource.PlayClipAtPoint(collectMissile, transform.position);
+
+            }
 
         }
 

@@ -2447,7 +2447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Twitter
+  m_Text: Share Score
 --- !u!222 &1326331031
 CanvasRenderer:
   m_ObjectHideFlags: 0

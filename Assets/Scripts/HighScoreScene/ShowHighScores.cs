@@ -34,16 +34,16 @@ public class ShowHighScores : MonoBehaviour {
     {
 
         // Get scores from array and display them
-        Score9.text = "1. " + HighScoreTable.saveHighScores[9];
-        Score8.text = "2. " + HighScoreTable.saveHighScores[8];
-        Score7.text = "3. " + HighScoreTable.saveHighScores[7];
-        Score6.text = "4. " + HighScoreTable.saveHighScores[6];
-        Score5.text = "5. " + HighScoreTable.saveHighScores[5];
-        Score4.text = "6. " + HighScoreTable.saveHighScores[4];
-        Score3.text = "7. " + HighScoreTable.saveHighScores[3];
-        Score2.text = "8. " + HighScoreTable.saveHighScores[2];
-        Score1.text = "9. " + HighScoreTable.saveHighScores[1];
-        Score0.text = "10. " + HighScoreTable.saveHighScores[0];
+        Score9.text = " " + HighScoreTable.saveHighScores[9];
+        Score8.text = " " + HighScoreTable.saveHighScores[8];
+        Score7.text = " " + HighScoreTable.saveHighScores[7];
+        Score6.text = " " + HighScoreTable.saveHighScores[6];
+        Score5.text = " " + HighScoreTable.saveHighScores[5];
+        Score4.text = " " + HighScoreTable.saveHighScores[4];
+        Score3.text = " " + HighScoreTable.saveHighScores[3];
+        Score2.text = " " + HighScoreTable.saveHighScores[2];
+        Score1.text = " " + HighScoreTable.saveHighScores[1];
+        Score0.text = " " + HighScoreTable.saveHighScores[0];
 
     }// End displayTopScores
 

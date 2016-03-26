@@ -30,13 +30,14 @@ public class ScrollGameOverText : MonoBehaviour {
         {
 
             // Move text left
-            gameOver -= 3;
+            gameOver -= 1.8f;
 
             // Reposition game over text
             gameOverTitle.anchoredPosition = new Vector2(gameOver, 0);
           
         }
 
+        // when text hits center of screen load the game over scene
         if (gameOver <= centerScreen)
         {
             loadGameOverScene();
