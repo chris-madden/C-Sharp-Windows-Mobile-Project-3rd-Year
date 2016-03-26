@@ -4,11 +4,19 @@ using UnityEngine.SceneManagement;
 
 public class ReloadGame : MonoBehaviour {
 
+    public AudioClip uiSound;
+
+    private AudioSource source;
+
 	// Use this for initialization
 	void Start () {
 
         // Code used for testing local storage on device that had scored saved from a previous build
         //PlayerPrefs.DeleteAll();
+
+        source = GetComponent<AudioSource>();
+
+        source.volume = 0.3f;
 
     }
 	
@@ -31,10 +39,27 @@ public class ReloadGame : MonoBehaviour {
 
     }
 
+    public void startScreen()
+    {
+
+        SceneManager.LoadScene("StartMenu");
+
+    }
+
     public void quitGame()
     {
 
         Application.Quit();
+
+    }
+
+    // Plays audio for button clicks
+    public void playUISound()
+    {
+
+        //AudioSource.PlayClipAtPoint(uiSound, transform.position);
+
+        source.PlayOneShot(uiSound);
 
     }
 }

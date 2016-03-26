@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: b47a8d26bd45adb46911c391007e4263
-timeCreated: 1459007876
+guid: 027bb0fae90cfe04ab0688e03b582fcb
+timeCreated: 1459016886
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - uiSound: {fileID: 8300000, guid: 3b7a828a646174088aa48ee1db9c439c, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

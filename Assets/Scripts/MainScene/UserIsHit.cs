@@ -1,22 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UserIsHit : MonoBehaviour {
 
     private int highScore;
-
     private HighScoreTable hst;
-
+    private ScrollGameOverText sTxt;
     public GameObject explosion;
-
-    bool isGameOver = false;
 
     // Variables for audio
     public AudioClip playerDeathSound;
 
     // Use this for initialization
     void Start () {
+
+        GameObject textScroll = GameObject.FindGameObjectWithTag("Finish");
+
+        sTxt = textScroll.GetComponent<ScrollGameOverText>();
 
         // Find camera with script on it
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -27,19 +29,17 @@ public class UserIsHit : MonoBehaviour {
         // Store high score for comparison
         highScore = PlayerPrefs.GetInt("High Score");
 
-    }
+    }// End Start
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 
     // Triggers end of current session
     void OnCollisionEnter2D(Collision2D coll)
     {
-
-       
 
         // If player collides with enemy
         if (coll.gameObject.tag == "enemy" || coll.gameObject.tag == "enemy")
@@ -82,7 +82,6 @@ public class UserIsHit : MonoBehaviour {
             // Destroy the explosion after half a second
             Destroy(cloneExplosion, 0.05f);
 
-
             // Remove ship from scene
             Destroy(this.gameObject);
 
@@ -94,6 +93,9 @@ public class UserIsHit : MonoBehaviour {
 
             }
 
+
+            // Tell ScrollGameOverText script that game is over
+            isGameOver();
             // Want to yield for a couple of seconds as music fades out
 
             //Ships needs to explode 
@@ -105,6 +107,7 @@ public class UserIsHit : MonoBehaviour {
             // Fade out music
 
             // Wait 2 seconds to load game over scene
+            //loadGameOverScene();
 
 
         }// End if
@@ -118,6 +121,14 @@ public class UserIsHit : MonoBehaviour {
 
         // Load game over screen
         SceneManager.LoadScene("GameOverScreen");
+
+    }
+
+    void isGameOver()
+    {
+
+        // Set to true to start txt scrolling
+        sTxt.isGameOver = true;
 
     }
 
