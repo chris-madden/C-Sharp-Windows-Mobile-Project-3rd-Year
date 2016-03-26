@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11491044}
   - 60: {fileID: 6084240}
   - 50: {fileID: 5039904}
+  - 114: {fileID: 11400924}
   m_Layer: 9
   m_Name: sMissile4
   m_TagString: enemy
@@ -82,6 +83,18 @@ PolygonCollider2D:
       - {x: 0.19999999, y: -0.255}
       - {x: 0.26, y: -0.405}
       - {x: 0.29999998, y: -0.405}
+--- !u!114 &11400924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae37a1d64996f11438f986715a4d910d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionSmall: {fileID: 134522, guid: 25d199abff200c545ac2ac5105380c14, type: 2}
 --- !u!114 &11491044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,6 +171,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosionSmall
+      value: 
+      objectReference: {fileID: 134522, guid: 25d199abff200c545ac2ac5105380c14, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
