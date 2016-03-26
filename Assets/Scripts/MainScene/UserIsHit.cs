@@ -33,7 +33,7 @@ public class UserIsHit : MonoBehaviour {
     {
 
         // If player collides with enemy
-        if (coll.gameObject.tag == "enemy")
+        if (coll.gameObject.tag == "enemy" || coll.gameObject.tag == "enemy")
         {
 
             //If the high score is greater than the current sessions score
@@ -66,6 +66,8 @@ public class UserIsHit : MonoBehaviour {
                 hst.onDeathHighScore(GameControl.score);
 
             }
+
+            // Want to yield for a couple of seconds as music fades out
 
             // Load game over screen
             SceneManager.LoadScene("GameOverScreen");
