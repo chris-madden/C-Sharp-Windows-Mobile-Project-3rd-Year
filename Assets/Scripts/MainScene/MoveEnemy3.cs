@@ -3,12 +3,16 @@ using System.Collections;
 
 public class MoveEnemy3 : MonoBehaviour {
 
-    public float speed = 5;
+    public float speed = 5f, destroyMissileTime = 5f, nextSpawn = 2f;
 
     private bool hitLeft = false;
 
+    public GameObject enemyMisssile;
+
 	// Use this for initialization
 	void Start () {
+
+        StartCoroutine(enemyFireMissile(nextSpawn));
 	
 	}
 	
@@ -21,6 +25,9 @@ public class MoveEnemy3 : MonoBehaviour {
         // Enemy behaviour
         if (transform.position.x >= -2 && hitLeft == false)
         {
+
+            // Fire Missiles here
+
 
             // Enemy moves to it's right (Players left)
             transform.position += transform.right * Time.deltaTime * (speed / 2);
@@ -51,5 +58,32 @@ public class MoveEnemy3 : MonoBehaviour {
         }// End if else
 
     }// End update
+
+    // Enemy will fire missiles
+    IEnumerator enemyFireMissile(float nextSpawn)
+    {
+
+        while (true)
+        {
+
+            if (transform.position.y < 6 && transform.position.y > -1)
+            {
+
+                //Create missile on screen from center of position of ship and change it to type Rigidbody2D
+                //Store the instaniated missile into a variable called missileClone
+                var missileClone = Instantiate(enemyMisssile, transform.position, Quaternion.Euler(0, 0, 180));
+
+                // Destroy the missile clone after a set number of seconds
+                Destroy(missileClone, destroyMissileTime);
+
+            }// End if
+
+            yield return new WaitForSeconds(nextSpawn);
+
+        }// End while
+
+    }// End  enemyFireMissile(nextSpawn)
+
+    
 
 }// End class MoveEnemy3

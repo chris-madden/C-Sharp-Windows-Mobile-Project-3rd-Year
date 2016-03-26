@@ -19,9 +19,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        // Keep spawning enemy 
-        //InvokeRepeating("spawnEnemy3", spawnTime, nextSpawn);
-
+        // Use coroutine to spawn enemies every X seconds
         StartCoroutine(enemySpawn(nextSpawn));
 
     }
@@ -58,21 +56,21 @@ public class InstantiateEnemy3 : MonoBehaviour {
         while (true)
         {
 
-            if (GameControl.score > 50)
+            if (GameControl.score > 100)
             {
 
                 nextSpawn = 1f;
 
             }
 
-            if (GameControl.score > 100)
+            if (GameControl.score > 300)
             {
 
                 nextSpawn = 0.5f;
 
             }
 
-            if (GameControl.score > 150)
+            if (GameControl.score > 500)
             {
 
                 nextSpawn = 0.25f;

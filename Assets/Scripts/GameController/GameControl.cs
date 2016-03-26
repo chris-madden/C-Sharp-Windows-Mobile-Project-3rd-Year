@@ -20,15 +20,10 @@ public class GameControl : MonoBehaviour {
         UpdateMissiles();
         UpdateScore();
 
-
-        Debug.Log(GameControl.score); 
-
     }// End Start
 	
 	// Update is called once per frame
 	void Update () {
-
-
 
 	}
 

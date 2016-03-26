@@ -259,6 +259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  destroyMissileTime: 5
+  nextSpawn: 1.5
+  enemyMisssile: {fileID: 124086, guid: 759f3a6cbd181164fa98e455d402c1e3, type: 2}
 --- !u!212 &21205780
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -405,6 +408,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Pan2D
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemyMisssile
+      value: 
+      objectReference: {fileID: 124086, guid: 759f3a6cbd181164fa98e455d402c1e3, type: 2}
+    - target: {fileID: 0}
+      propertyPath: nextSpawn
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
