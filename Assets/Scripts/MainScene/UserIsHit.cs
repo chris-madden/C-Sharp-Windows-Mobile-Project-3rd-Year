@@ -8,6 +8,7 @@ public class UserIsHit : MonoBehaviour {
     private int highScore;
     private HighScoreTable hst;
     private ScrollGameOverText sTxt;
+    private FadeMusic fm;
     public GameObject explosion;
 
     // Variables for audio
@@ -25,6 +26,8 @@ public class UserIsHit : MonoBehaviour {
 
         // Referenece to HighScoreTable script
         hst = camera.GetComponent<HighScoreTable>();
+
+        fm = camera.GetComponent<FadeMusic>();
 
         // Store high score for comparison
         highScore = PlayerPrefs.GetInt("High Score");
@@ -93,42 +96,20 @@ public class UserIsHit : MonoBehaviour {
 
             }
 
-
             // Tell ScrollGameOverText script that game is over
             isGameOver();
-            // Want to yield for a couple of seconds as music fades out
-
-            //Ships needs to explode 
-
-            // Pause game?
-
-            // Bring up message saying you died
-
-            // Fade out music
-
-            // Wait 2 seconds to load game over scene
-            //loadGameOverScene();
-
 
         }// End if
 
     }// End OnCollisionEnter2D 
-
-     //Invoke("loadGameOverScene", 2f);
-
-    void loadGameOverScene()
-    {
-
-        // Load game over screen
-        SceneManager.LoadScene("GameOverScreen");
-
-    }
-
+ 
     void isGameOver()
     {
 
         // Set to true to start txt scrolling
         sTxt.isGameOver = true;
+
+        fm.isGameOver = true;
 
     }
 

@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ScrollGameOverText : MonoBehaviour {
 
+    // Game over text 
     public RectTransform gameOverTitle;
 
     private float gameOver = 400, centerScreen = 0;
-
-    private float speed = 5;
 
     public bool isGameOver = false;
 
@@ -34,7 +34,12 @@ public class ScrollGameOverText : MonoBehaviour {
 
             // Reposition game over text
             gameOverTitle.anchoredPosition = new Vector2(gameOver, 0);
+          
+        }
 
+        if (gameOver <= centerScreen)
+        {
+            loadGameOverScene();
         }
 
     }// End update
@@ -46,5 +51,13 @@ public class ScrollGameOverText : MonoBehaviour {
         gameOverTitle.anchoredPosition = new Vector2(gameOver, 0);
 
     }// alignText
+
+    void loadGameOverScene()
+    {
+
+        // Load game over screen
+        SceneManager.LoadScene("GameOverScreen");
+
+    }
 
 }// End class ScrollGameOverText
