@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae37a1d64996f11438f986715a4d910d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDeathSound: {fileID: 8300000, guid: ca4926b54cc952d42badb2179f6e8643, type: 3}
   explosionSmall: {fileID: 134522, guid: 25d199abff200c545ac2ac5105380c14, type: 2}
 --- !u!114 &11491044
 MonoBehaviour:
@@ -184,6 +185,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemyDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ca4926b54cc952d42badb2179f6e8643, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124086}

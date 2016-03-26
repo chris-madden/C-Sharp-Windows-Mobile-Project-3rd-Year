@@ -87,6 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fde2cbcd491d3458076acb0f41446d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 158170, guid: dfae7f8418b69864bbd14b5adc30f3ca, type: 2}
+  playerDeathSound: {fileID: 8300000, guid: ca4926b54cc952d42badb2179f6e8643, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -178,6 +180,14 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 158170, guid: dfae7f8418b69864bbd14b5adc30f3ca, type: 2}
+    - target: {fileID: 0}
+      propertyPath: playerDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ca4926b54cc952d42badb2179f6e8643, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

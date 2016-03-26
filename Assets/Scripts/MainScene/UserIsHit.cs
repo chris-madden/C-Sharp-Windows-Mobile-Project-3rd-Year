@@ -8,8 +8,15 @@ public class UserIsHit : MonoBehaviour {
 
     private HighScoreTable hst;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject explosion;
+
+    bool isGameOver = false;
+
+    // Variables for audio
+    public AudioClip playerDeathSound;
+
+    // Use this for initialization
+    void Start () {
 
         // Find camera with script on it
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -31,6 +38,8 @@ public class UserIsHit : MonoBehaviour {
     // Triggers end of current session
     void OnCollisionEnter2D(Collision2D coll)
     {
+
+       
 
         // If player collides with enemy
         if (coll.gameObject.tag == "enemy" || coll.gameObject.tag == "enemy")
@@ -67,13 +76,49 @@ public class UserIsHit : MonoBehaviour {
 
             }
 
+            // Clone the explosion object at the position where the enemy is hit with the missile
+            GameObject cloneExplosion = (GameObject)Instantiate(explosion, transform.position, Quaternion.identity);
+
+            // Destroy the explosion after half a second
+            Destroy(cloneExplosion, 0.05f);
+
+
+            // Remove ship from scene
+            Destroy(this.gameObject);
+
+            if (playerDeathSound)
+            {
+
+                // Play audio clip at the postiton the object is destroyed
+                AudioSource.PlayClipAtPoint(playerDeathSound, transform.position);
+
+            }
+
             // Want to yield for a couple of seconds as music fades out
 
-            // Load game over screen
-            SceneManager.LoadScene("GameOverScreen");
+            //Ships needs to explode 
+
+            // Pause game?
+
+            // Bring up message saying you died
+
+            // Fade out music
+
+            // Wait 2 seconds to load game over scene
+
 
         }// End if
 
     }// End OnCollisionEnter2D 
+
+     //Invoke("loadGameOverScene", 2f);
+
+    void loadGameOverScene()
+    {
+
+        // Load game over screen
+        SceneManager.LoadScene("GameOverScreen");
+
+    }
 
 }// End class UserIsHit
