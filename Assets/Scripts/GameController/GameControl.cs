@@ -7,6 +7,7 @@ public class GameControl : MonoBehaviour {
     public static int score, numOfMissiles;
     private int highScore;
     public Text scoreText, highScoreText, missileAmount;
+    public bool isDead = false;
     
 	// Use this for initialization
 	void Start () {
@@ -30,14 +31,21 @@ public class GameControl : MonoBehaviour {
     // Adds to current score and updates it in the UI
     public void AddScore(int newScore)
     {
-        score += newScore;
-        UpdateScore();
+
+        if (isDead == false)
+        {
+            score += newScore;
+            UpdateScore();
+        }
+       
     }
 
     // Will update the UI with the new score
     public void UpdateScore()
     {
-        scoreText.text = "SCORE: " + score.ToString();
+      
+         scoreText.text = "SCORE: " + score.ToString();
+       
     }
 
     // When player gets the extraMissile sprite they get extra missiles

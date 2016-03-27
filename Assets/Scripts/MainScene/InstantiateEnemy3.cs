@@ -16,16 +16,25 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
     public static float nextSpawn = 2f;
 
+    // Time system
+    private float startTime, elapsedTime;
+
     // Use this for initialization
     void Start () {
 
         // Use coroutine to spawn enemies every X seconds
         StartCoroutine(enemySpawn(nextSpawn));
 
+        // Get state of time on main game start up
+        startTime = Time.time;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        // The timeer starts at 0 when this scene is loaded up
+        elapsedTime = Time.time - startTime;
 
     }
 
@@ -56,24 +65,26 @@ public class InstantiateEnemy3 : MonoBehaviour {
         while (true)
         {
 
-            if (GameControl.score > 100)
+            // Less than 30 seconds
+            if (elapsedTime < 60)
             {
 
                 nextSpawn = 1f;
 
             }
 
-            if (GameControl.score > 300)
+            // Between 30 and 60 seconds
+            if (elapsedTime > 60 && elapsedTime < 90)
             {
 
-                nextSpawn = 0.5f;
+                nextSpawn = 0.75f;
 
             }
 
-            if (GameControl.score > 500)
+            if (elapsedTime > 90)
             {
 
-                nextSpawn = 0.25f;
+                nextSpawn = 0.5f;
 
             }
 

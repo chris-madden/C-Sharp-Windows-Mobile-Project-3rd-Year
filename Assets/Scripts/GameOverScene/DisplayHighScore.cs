@@ -14,7 +14,7 @@ public class DisplayHighScore : MonoBehaviour {
         currrentScore.text = GameControl.score.ToString();
 
         // Store high score in variable
-        highScore = PlayerPrefs.GetInt("Score9");
+        highScore = PlayerPrefs.GetInt("High Score");
 
         // Show high score in UI
         highScoreText.text = highScore.ToString();

@@ -76,11 +76,10 @@ public class HighScoreTable : MonoBehaviour {
     public void onDeathHighScore(int newHighScore)
     {
 
-        // Using normal array
+        // Overwrite lowest score in table with the new highscore
         saveHighScores[0] = newHighScore;
 
-        //=======================================
-        //using normal array
+        // Sort the array from lowest to highest
         Array.Sort(saveHighScores);
 
         // save to disk
