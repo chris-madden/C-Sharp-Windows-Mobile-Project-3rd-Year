@@ -509,6 +509,7 @@ MonoBehaviour:
   scoreText: {fileID: 593318139}
   highScoreText: {fileID: 1722877072}
   missileAmount: {fileID: 313590248}
+  isDead: 0
 --- !u!114 &973624823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,8 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extramissiles: {fileID: 192522, guid: eb89806c64ff4b64fa4b21d2508decb5, type: 2}
-  destroyExtraMissile: 5
-  spawnTime: 10
+  destroyExtraMissile: 2
   nextSpawn: 2
 --- !u!82 &973624825
 AudioSource:
@@ -649,6 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 187122, guid: 270f16cf98d38dd45b3dca256088b0af, type: 2}
+  fireMissileAudio: {fileID: 8300000, guid: 0dc3d3c5bde8d9f4283a049f175e3a72, type: 3}
   destroyMissileTime: 2
 --- !u!114 &995422147
 MonoBehaviour:

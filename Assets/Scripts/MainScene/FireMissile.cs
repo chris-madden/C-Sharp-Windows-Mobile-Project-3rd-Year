@@ -9,6 +9,9 @@ public class FireMissile : MonoBehaviour {
     // Get variable of type GameControl script
     private GameControl gc;
 
+    // Audio for shooting missile
+    public AudioClip fireMissileAudio;
+
     // Time until missile is destroyed
     public float destroyMissileTime = 2;
 
@@ -45,6 +48,14 @@ public class FireMissile : MonoBehaviour {
 
             // Destroy the missile clone after a set number of seconds
             Destroy(missileClone, destroyMissileTime);
+
+            if (fireMissileAudio)
+            {
+
+                // Play shooting sound effect
+                AudioSource.PlayClipAtPoint(fireMissileAudio, transform.position);
+
+            }
 
         }// End if
            

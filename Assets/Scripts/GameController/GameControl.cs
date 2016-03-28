@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GameControl : MonoBehaviour {
 
     public static int score, numOfMissiles;
-    private int highScore;
+    //private int highScore;
     public Text scoreText, highScoreText, missileAmount;
     public bool isDead = false;
     
@@ -14,7 +14,7 @@ public class GameControl : MonoBehaviour {
 
         // Starting game variables
         score = 0;
-        numOfMissiles = 50;
+        numOfMissiles = 30;
 
         // UI text
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("Score9");

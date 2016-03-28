@@ -69,23 +69,35 @@ public class InstantiateEnemy3 : MonoBehaviour {
             if (elapsedTime < 60)
             {
 
-                nextSpawn = 1f;
+                nextSpawn = 1.5f;
 
             }
 
             // Between 30 and 60 seconds
-            if (elapsedTime > 60 && elapsedTime < 90)
+            if (elapsedTime > 60 && elapsedTime < 120)
             {
 
-                nextSpawn = 0.75f;
+                nextSpawn = 1.25f;
 
             }
 
-            if (elapsedTime > 90)
+            if (elapsedTime > 120 && elapsedTime < 180)
             {
 
-                nextSpawn = 0.5f;
+                nextSpawn = 1f;
 
+            }
+
+            if (elapsedTime > 180 && elapsedTime < 240)
+            {
+
+                nextSpawn = 0.8f;
+
+            }
+
+            if (elapsedTime > 240)
+            {
+                nextSpawn = 0.6f;
             }
 
             // Call method to spawn enemy at random positions

@@ -9,6 +9,8 @@ public class MoveEnemy3 : MonoBehaviour {
 
     public GameObject enemyMisssile;
 
+    public AudioClip fireMissileAudio;
+
 	// Use this for initialization
 	void Start () {
 
@@ -75,6 +77,14 @@ public class MoveEnemy3 : MonoBehaviour {
 
                 // Destroy the missile clone after a set number of seconds
                 Destroy(missileClone, destroyMissileTime);
+
+                if (fireMissileAudio)
+                {
+
+                    // Play shooting sound effect
+                    AudioSource.PlayClipAtPoint(fireMissileAudio, transform.position);
+
+                }
 
             }// End if
 

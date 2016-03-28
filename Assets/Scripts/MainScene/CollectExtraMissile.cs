@@ -5,7 +5,7 @@ public class CollectExtraMissile : MonoBehaviour {
 
     private GameControl gc;
 
-    public int extraMissiles = 10;
+    public int extraMissiles = 5;
 
     public AudioClip collectMissile;
 

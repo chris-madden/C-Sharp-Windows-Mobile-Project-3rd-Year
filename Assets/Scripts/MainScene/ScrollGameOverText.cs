@@ -50,8 +50,6 @@ public class ScrollGameOverText : MonoBehaviour {
             // Should save the final score regardless of whether points were obtained after death
             saveHighScore();
 
-            Debug.Log("IS THIS EVEN RUNNNING, Stop = " + stop);
-
             // Stops method from being called more than once
             stop = 1;
 

@@ -22,11 +22,13 @@ Sound Effects by
 ================
 Dustyroom Game Studio
 Bleep Blop Audio
+Strange Pulse Studio
 
 Found at
 =========
 https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=relevance/query=casual&game&sounds
 http://www.bleepblopaudio.com/
+http://strangepulsestudio.blogspot.ie/
 
 Music by
 ========
