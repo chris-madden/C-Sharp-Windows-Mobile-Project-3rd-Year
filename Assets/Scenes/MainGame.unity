@@ -450,6 +450,10 @@ Prefab:
       propertyPath: gameover
       value: 
       objectReference: {fileID: 477198181}
+    - target: {fileID: 100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
   m_IsPrefabParent: 0
@@ -552,13 +556,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 973624814}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c11e40e9c36d5ad4386fa88f0fa74c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy3: {fileID: 149354, guid: e536b8892f6b1e34eb88665592e4943a, type: 2}
-  destroyEnemy: 10
+  destroyEnemy: 4.5
   spawnTime: 1
 --- !u!114 &973624821
 MonoBehaviour:

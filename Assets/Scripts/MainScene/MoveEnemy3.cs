@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveEnemy3 : MonoBehaviour {
 
-    public float speed = 5f, destroyMissileTime = 5f, nextSpawn = 2f;
+    public float speed = 5f, destroyMissileTime = 1.5f, nextSpawn = 2f;
 
     private bool hitLeft = false;
 
@@ -93,7 +93,5 @@ public class MoveEnemy3 : MonoBehaviour {
         }// End while
 
     }// End  enemyFireMissile(nextSpawn)
-
-    
 
 }// End class MoveEnemy3

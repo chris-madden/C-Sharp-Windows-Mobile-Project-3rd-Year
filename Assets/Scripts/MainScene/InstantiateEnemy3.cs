@@ -9,7 +9,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
     // Stores random values for enemy spawning posiitons
     Vector3 enemyPos;
 
-    public float destroyEnemy = 10;
+    public float destroyEnemy = 2.3f;
 
     // Time to wait until next enemy is spawned
     public float spawnTime = 1f;

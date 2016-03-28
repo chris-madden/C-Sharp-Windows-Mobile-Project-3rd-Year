@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  destroyMissileTime: 5
+  destroyMissileTime: 1.5
   nextSpawn: 1.5
   enemyMisssile: {fileID: 124086, guid: 759f3a6cbd181164fa98e455d402c1e3, type: 2}
   fireMissileAudio: {fileID: 8300000, guid: f605ad8805174674cb46f8a4f140baca, type: 3}
@@ -422,6 +422,10 @@ Prefab:
       propertyPath: fireMissileAudio
       value: 
       objectReference: {fileID: 8300000, guid: f605ad8805174674cb46f8a4f140baca, type: 3}
+    - target: {fileID: 0}
+      propertyPath: destroyMissileTime
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149354}
