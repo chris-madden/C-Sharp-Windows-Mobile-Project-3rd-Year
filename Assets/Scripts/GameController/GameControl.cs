@@ -44,7 +44,7 @@ public class GameControl : MonoBehaviour {
     public void UpdateScore()
     {
       
-         scoreText.text = "SCORE: " + score.ToString();
+         scoreText.text = "Score: " + score.ToString();
        
     }
 
@@ -67,7 +67,7 @@ public class GameControl : MonoBehaviour {
 
     public void UpdateMissiles()
     {
-        missileAmount.text = "Missiles: " + GameControl.numOfMissiles;
+        missileAmount.text = "X " + GameControl.numOfMissiles;
     }
 
 }

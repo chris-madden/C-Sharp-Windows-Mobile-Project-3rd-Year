@@ -613,6 +613,8 @@ GameObject:
   - 114: {fileID: 827220606}
   - 114: {fileID: 827220607}
   - 82: {fileID: 827220608}
+  - 114: {fileID: 827220609}
+  - 114: {fileID: 827220610}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -784,6 +786,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &827220609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 827220600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6e45f0509ba464e9da2dc38b95480f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &827220610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 827220600}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6d0bcbd1ab1ca4ba3ec017cb117959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &881094692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,7 +2616,7 @@ GameObject:
   - 114: {fileID: 1043859242}
   m_Layer: 5
   m_Name: GameTitle
-  m_TagString: Untagged
+  m_TagString: Title
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2658,7 +2682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Game Title Goes Here
+  m_Text: SHOOT   DIE  REPEAT
 --- !u!222 &1043859244
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2738,3 +2762,30 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117134840}
+--- !u!1 &1933538948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 75773350}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1933538949}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1933538949
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 75773350}
+  m_GameObject: {fileID: 1933538948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
