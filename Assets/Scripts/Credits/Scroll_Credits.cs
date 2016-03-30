@@ -12,7 +12,7 @@ public class Scroll_Credits : MonoBehaviour {
 
     private float speed = 2;
 
-    private float stopScrolling = 1800;
+    private float stopScrolling = 1900;
 
     // Use this for initialization
     void Start () {
