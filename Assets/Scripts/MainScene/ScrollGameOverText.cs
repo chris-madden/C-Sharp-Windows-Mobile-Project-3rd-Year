@@ -60,7 +60,7 @@ public class ScrollGameOverText : MonoBehaviour {
         {
 
             // Move text left
-            gameOver -= 1.8f;
+            gameOver -= 3f;
 
             // Reposition game over text
             gameOverTitle.anchoredPosition = new Vector2(gameOver, 0);

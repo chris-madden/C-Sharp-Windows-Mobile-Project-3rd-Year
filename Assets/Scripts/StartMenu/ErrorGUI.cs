@@ -3,8 +3,10 @@ using System.Collections;
 
 public class ErrorGUI : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    bool buttonClicked = false;
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -16,10 +18,18 @@ public class ErrorGUI : MonoBehaviour {
     void OnGUI()
     {
 
-        if (GUI.Button(new Rect(50, Screen.height / 2.5f, 300, 100), "No Accelerometer Present\nPlease download with device which has one"))
+
+        GUIStyle customButton = new GUIStyle("button");
+        customButton.fontSize = 16;
+        customButton.fontStyle = FontStyle.Bold;
+
+        GUI.backgroundColor = Color.black;
+
+        if (GUI.Button(new Rect(0, Screen.height / 2.5f, Screen.width, 100), "No Accelerometer Present\nPlease download with device which has one", customButton))
         {
             this.enabled = false;
         }
 
-    }
-}
+    }// End OnGUI()
+
+}// End class ErrorGUI

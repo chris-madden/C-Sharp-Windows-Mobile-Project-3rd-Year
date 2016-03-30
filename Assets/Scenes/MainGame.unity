@@ -452,7 +452,7 @@ Prefab:
       objectReference: {fileID: 477198181}
     - target: {fileID: 100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b8ac6e9f69e1064185635f094951ea1, type: 2}
@@ -2776,7 +2776,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.99607843, g: 0.003921569, b: 0.003921569, a: 1}
     m_HighlightedColor: {r: 0.99607843, g: 0.003921569, b: 0.003921569, a: 1}
-    m_PressedColor: {r: 0.9117647, g: 0.07374569, b: 0.07374569, a: 1}
+    m_PressedColor: {r: 0.9191176, g: 0.31087804, b: 0.31087804, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
