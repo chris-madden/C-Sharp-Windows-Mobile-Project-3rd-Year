@@ -3,8 +3,6 @@ using System.Collections;
 
 public class ErrorGUI : MonoBehaviour {
 
-    bool buttonClicked = false;
-
     // Use this for initialization
     void Start () {
 	
