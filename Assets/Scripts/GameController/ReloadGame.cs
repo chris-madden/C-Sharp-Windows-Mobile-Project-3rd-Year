@@ -46,6 +46,13 @@ public class ReloadGame : MonoBehaviour {
 
     }
 
+    public void creditsScreen()
+    {
+
+        SceneManager.LoadScene("CreditsScreen");
+
+    }
+
     public void quitGame()
     {
 

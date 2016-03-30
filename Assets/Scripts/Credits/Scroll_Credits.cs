@@ -12,14 +12,13 @@ public class Scroll_Credits : MonoBehaviour {
 
     private float speed = 2;
 
-    private float stopScrolling = 1800; 
+    private float stopScrolling = 1800;
 
     // Use this for initialization
     void Start () {
 
         // Get reference to the Game titles Transform
         credits = GetComponent<RectTransform>();
-
         // Move the title above the screen
         credits.anchoredPosition = new Vector2(0, creditPos);
 
@@ -38,5 +37,6 @@ public class Scroll_Credits : MonoBehaviour {
             credits.anchoredPosition = new Vector2(0, creditPos);
         }
 
-    }
-}
+    }// End update
+
+}// End Scroll_Credits
