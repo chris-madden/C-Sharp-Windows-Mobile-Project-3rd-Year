@@ -341,6 +341,11 @@ PlayerSettings:
   metroApplicationDescription: Shoot Die Repeat
   wsaImages:
     65636: 
+    2031716: Assets/Sprites/Windows_Store_Logos/Spaceship44X44.png
+    2097252: Assets/Sprites/Windows_Store_Logos/Spaceship71X71.png
+    2162788: Assets/Sprites/Windows_Store_Logos/Spaceship150X150.png
+    2228324: Assets/Sprites/Windows_Store_Logos/Spaceship310X310.png
+    2293860: Assets/Sprites/Windows_Store_Logos/Spaceship310X150.png
   metroTileShortName: Shoot Die Rep
   metroCommandLineArgsFile: 
   metroTileShowName: 0
