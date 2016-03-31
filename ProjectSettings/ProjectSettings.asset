@@ -367,7 +367,7 @@ PlayerSettings:
       CodeGeneration: False
       EnterpriseAuthentication: False
       HumanInterfaceDevice: False
-      InternetClient: False
+      InternetClient: True
       InternetClientServer: False
       Location: False
       Microphone: False
