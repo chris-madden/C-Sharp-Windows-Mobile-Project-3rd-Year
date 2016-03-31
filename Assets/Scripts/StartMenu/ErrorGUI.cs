@@ -3,28 +3,19 @@ using System.Collections;
 
 public class ErrorGUI : MonoBehaviour {
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     void OnGUI()
     {
-
-
+        // Create a custom style for the error message button
         GUIStyle customButton = new GUIStyle("button");
         customButton.fontSize = 16;
         customButton.fontStyle = FontStyle.Bold;
 
         GUI.backgroundColor = Color.black;
 
+        // Draw error message button to screen
         if (GUI.Button(new Rect(0, Screen.height / 2.5f, Screen.width, 100), "No Accelerometer Present\nPlease download with device which has one", customButton))
         {
+            // Disable this screen when button is pressed
             this.enabled = false;
         }
 

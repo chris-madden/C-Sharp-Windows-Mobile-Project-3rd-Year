@@ -8,8 +8,10 @@ public class CheckForAccelerometer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        // Look for camera object which is holding script ErrorGUI
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
 
+        // Get a reference to the ErrorGUI script
         eg = camera.GetComponent<ErrorGUI>();
 
         // Check if device has an accelerometer
@@ -20,19 +22,10 @@ public class CheckForAccelerometer : MonoBehaviour {
         }
         else
         {
-
-            Debug.Log("No Accelerometer available");
-
             // Turn on message script if no accelerometer present
             eg.enabled = true;
+        }// End if/else
 
-        }
-
-    }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }// End Start()
 
 }// End class CheckForAccelerometer

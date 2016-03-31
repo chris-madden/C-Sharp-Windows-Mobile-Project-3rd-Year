@@ -5,14 +5,10 @@ using UnityEngine.UI;
 public class Scroll_Title : MonoBehaviour {
 
     private RectTransform title;
-
     private float titlePos = 200;
-
     private float screenCenter = -150;
-
     public float speed = 2;
 
-    // Use this for initialization
     void Start () {
 
         // Get reference to the Game titles Transform
@@ -21,9 +17,8 @@ public class Scroll_Title : MonoBehaviour {
         // Move the title above the screen
         title.anchoredPosition = new Vector2(0, titlePos);
 
-    }
-	
-	// Update is called once per frame
+    }// End Start()
+    	
 	void Update () {
 
         // Subtract from titlePos to move title down screen
