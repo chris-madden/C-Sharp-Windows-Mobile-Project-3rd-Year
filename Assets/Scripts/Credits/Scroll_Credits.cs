@@ -5,13 +5,10 @@ using UnityEngine.UI;
 public class Scroll_Credits : MonoBehaviour {
 
     private RectTransform credits;
-
     public Text creditsText;
 
     private float creditPos = -150;
-
     private float speed = 2;
-
     private float stopScrolling = 1900;
 
     // Use this for initialization
@@ -22,7 +19,7 @@ public class Scroll_Credits : MonoBehaviour {
         // Move the title above the screen
         credits.anchoredPosition = new Vector2(0, creditPos);
 
-    }
+    }// End Start()
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,10 +30,12 @@ public class Scroll_Credits : MonoBehaviour {
         // If the title hasn't reached the center of the screen
         if (creditPos < stopScrolling)
         {
+
             // Move the title down
             credits.anchoredPosition = new Vector2(0, creditPos);
-        }
 
-    }// End update
+        }// End if
 
-}// End Scroll_Credits
+    }// End Update()
+
+}// End class Scroll_Credits

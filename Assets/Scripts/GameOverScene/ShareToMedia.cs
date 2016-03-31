@@ -11,23 +11,20 @@ public class ShareToMedia : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
+        // Initialise variables
         highscore = PlayerPrefs.GetInt("Score9");
         message += highscore.ToString();
         message += messagePart2;
 
-    }
+    }// End Start()
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+    // Share high score to Twitter
     public void shareToTwitter()
     {
 
         // Send message to twitter
         Application.OpenURL("https://twitter.com/intent/tweet?text=" + message);
 
-    }
+    }// End shareToTwitter()
 
 }// End class ShareToMedia

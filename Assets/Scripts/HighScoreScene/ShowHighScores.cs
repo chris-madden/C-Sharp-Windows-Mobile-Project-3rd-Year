@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class ShowHighScores : MonoBehaviour {
 
     public Text Score9, Score8, Score7, Score6, Score5, Score4, Score3, Score2, Score1, Score0;
-
     private HighScoreTable hst;
 
 	// Use this for initialization
@@ -23,13 +22,8 @@ public class ShowHighScores : MonoBehaviour {
         // Display score in GUI
         displayTopScores();
 
-    }// End Start
+    }// End Start()
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     void displayTopScores()
     {
 
@@ -45,6 +39,6 @@ public class ShowHighScores : MonoBehaviour {
         Score1.text = " " + HighScoreTable.saveHighScores[1];
         Score0.text = " " + HighScoreTable.saveHighScores[0];
 
-    }// End displayTopScores
+    }// End displayTopScores()
 
 }// End class ShowHighScores

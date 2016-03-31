@@ -4,10 +4,8 @@ using System.Collections;
 public class CollectExtraMissile : MonoBehaviour {
 
     private GameControl gc;
-
-    public int extraMissiles = 5;
-
     public AudioClip collectMissile;
+    public int extraMissiles = 5;
 
     // Use this for initialization
     void Start () {
@@ -15,13 +13,8 @@ public class CollectExtraMissile : MonoBehaviour {
         // Find camera with script on it
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
 
-        // Get reference to to script
+        // Get reference to to script GameControl
         gc = camera.GetComponent<GameControl>();
-
-    }
-	
-	// Update is called once per frame
-	void Update () {
 
     }
 
@@ -40,11 +33,13 @@ public class CollectExtraMissile : MonoBehaviour {
             if (collectMissile)
             {
 
+                // Play Audio
                 AudioSource.PlayClipAtPoint(collectMissile, transform.position);
 
-            }
+            }// End nested if
 
-        }
+        }// End outer if
 
-    }// End 
-}
+    }// End OnCollisionEnter2D()
+
+}// End CollectExtraMissile

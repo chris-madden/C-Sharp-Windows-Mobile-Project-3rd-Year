@@ -5,23 +5,13 @@ public class DetroyEnemyMissile : MonoBehaviour {
 
     // Variables for audio
     public AudioClip enemyDeathSound;
-
     public GameObject explosionSmall;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     // Enemy will be destroyed on impact with missile
     void OnCollisionEnter2D(Collision2D coll)
     {
-
+        
+        // If there's a collision with a game object called goodMissile
         if (coll.gameObject.tag == "goodMissile")
         {
 
@@ -40,9 +30,10 @@ public class DetroyEnemyMissile : MonoBehaviour {
                 // Play audio clip at the postiton the object is destroyed
                 AudioSource.PlayClipAtPoint(enemyDeathSound, transform.position);
 
-            }
+            }// End nested if
 
-        }// End if
+        }// End outer if
 
-    }// End OnCollisionEnter2D
-}
+    }// End OnCollisionEnter2D()
+
+}// End class DetroyEnemyMissile

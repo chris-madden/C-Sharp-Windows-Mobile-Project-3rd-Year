@@ -7,6 +7,8 @@ public class HighScoreTable : MonoBehaviour {
     // Array which will hold the high scores
     public static int[] saveHighScores = new int[10];
 
+    // Used to detect whether it's the first time the game has been 
+    // played on a device
     private int firstGo = 0;
 
     // Use this for initialization
@@ -30,7 +32,7 @@ public class HighScoreTable : MonoBehaviour {
 
                 temp += 10;
 
-            }
+            }// End for
 
             // Set firstGo so it will only work once
             firstGo = 1;
@@ -38,6 +40,7 @@ public class HighScoreTable : MonoBehaviour {
             // Save the variable to disk
             PlayerPrefs.SetInt("FirstPlay", firstGo);
 
+            // Save scores
             PlayerPrefs.Save();
 
         }
@@ -47,11 +50,6 @@ public class HighScoreTable : MonoBehaviour {
 
     }// End Start
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     // Takes high scores off disk and stores in an array list
     public void loadHighScores()
     {

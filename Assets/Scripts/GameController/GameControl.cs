@@ -4,9 +4,8 @@ using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour {
 
-    public static int score, numOfMissiles;
-    //private int highScore;
     public Text scoreText, highScoreText, missileAmount;
+    public static int score, numOfMissiles;
     public bool isDead = false;
     
 	// Use this for initialization
@@ -23,11 +22,6 @@ public class GameControl : MonoBehaviour {
 
     }// End Start
 	
-	// Update is called once per frame
-	void Update () {
-
-	}
-
     // Adds to current score and updates it in the UI
     public void AddScore(int newScore)
     {
@@ -38,7 +32,7 @@ public class GameControl : MonoBehaviour {
             UpdateScore();
         }
        
-    }
+    }//End AddScore()
 
     // Will update the UI with the new score
     public void UpdateScore()
@@ -46,7 +40,7 @@ public class GameControl : MonoBehaviour {
       
          scoreText.text = "Score: " + score.ToString();
        
-    }
+    }// End UpdateScore
 
     // When player gets the extraMissile sprite they get extra missiles
     public void addMissiles(int extraMissiles)
@@ -55,7 +49,7 @@ public class GameControl : MonoBehaviour {
         GameControl.numOfMissiles += extraMissiles;
         UpdateMissiles();
 
-    }
+    }// End addMissiles()
 
     public void subtractMissiles(int numOfMissiles)
     {
@@ -63,11 +57,13 @@ public class GameControl : MonoBehaviour {
         GameControl.numOfMissiles--;
         UpdateMissiles();
 
-    }
+    }// End subtractMissiles()
 
     public void UpdateMissiles()
     {
-        missileAmount.text = "X " + GameControl.numOfMissiles;
-    }
 
-}
+        missileAmount.text = "X " + GameControl.numOfMissiles;
+
+    }// End UpdateMissiles()
+
+}// End class GameControl

@@ -21,17 +21,11 @@ public class FireMissile : MonoBehaviour {
         // Find camera with script on it
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
 
-        // Get reference to to script
+        // Get reference to the script GameControl
         gc = camera.GetComponent<GameControl>();
 
-    }
+    }// End Start()
 	
-	// Update is called once per frame
-	void Update () {
-
-
-    }
-
     public void fireMissile()
     {
 
@@ -55,11 +49,11 @@ public class FireMissile : MonoBehaviour {
                 // Play shooting sound effect
                 AudioSource.PlayClipAtPoint(fireMissileAudio, transform.position);
 
-            }
+            }// End nested if
 
-        }// End if
+        }// End outer if
            
 
-    }// End fireMissile
+    }// End fireMissile()
 
 }// End class FireMissile

@@ -28,7 +28,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
         // Get state of time on main game start up
         startTime = Time.time;
 
-    }
+    }// End Start()
 	
 	// Update is called once per frame
 	void Update () {
@@ -36,7 +36,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
         // The timeer starts at 0 when this scene is loaded up
         elapsedTime = Time.time - startTime;
 
-    }
+    }// End Update()
 
     void spawnEnemy3()
     {
@@ -65,7 +65,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
         while (true)
         {
 
-            // Less than 30 seconds
+            // Less than 60 seconds
             if (elapsedTime < 60)
             {
 
@@ -73,7 +73,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
             }
 
-            // Between 30 and 60 seconds
+            // Between 60 and 120 seconds
             if (elapsedTime > 60 && elapsedTime < 120)
             {
 
@@ -81,6 +81,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
             }
 
+            // Between 120 and 180 seconds
             if (elapsedTime > 120 && elapsedTime < 180)
             {
 
@@ -88,6 +89,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
             }
 
+            // Between 180 and 240 seconds
             if (elapsedTime > 180 && elapsedTime < 240)
             {
 
@@ -95,6 +97,7 @@ public class InstantiateEnemy3 : MonoBehaviour {
 
             }
 
+            // Greater than 240 seconds
             if (elapsedTime > 240)
             {
                 nextSpawn = 0.6f;
@@ -107,6 +110,6 @@ public class InstantiateEnemy3 : MonoBehaviour {
             yield return new WaitForSeconds(nextSpawn);
         }
 
-    }// End enemySpawn
+    }// End enemySpawn()
 
 }// End class InstantiateEnemy3

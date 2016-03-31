@@ -6,11 +6,6 @@ public class MoveMissile : MonoBehaviour {
     // Speed of the missile
     public float speed = 5;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
 
@@ -23,18 +18,21 @@ public class MoveMissile : MonoBehaviour {
 
             Destroy(this.gameObject);
 
-        }
+        }// End if
 	
-	}
+	}// End Update()
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        // If there's a collison with an obeject who has the tag enemy
         if (coll.gameObject.tag == "enemy")
         {
            
             Destroy(this.gameObject);
-        }
-            
 
-    }
-}
+        }// End if
+
+    }// End OnCollisionEnter2D()
+
+}// End class MoveMissile
+

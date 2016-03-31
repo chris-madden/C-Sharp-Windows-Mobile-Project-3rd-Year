@@ -6,7 +6,6 @@ public class FadeMusic : MonoBehaviour {
     public AudioSource backgroundMusic;
 
     private float musicVolume = 0.1f;
-
     public bool isGameOver = false;
 
 	// Use this for initialization
@@ -15,7 +14,7 @@ public class FadeMusic : MonoBehaviour {
         // Set background music volume
         backgroundMusic.volume = musicVolume;
         
-	}
+	}// End Start()
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,8 +26,8 @@ public class FadeMusic : MonoBehaviour {
             // Fade the background music while the game over text scrolls
             backgroundMusic.volume -= musicVolume * Time.deltaTime / 2;
 
-        }
+        }// End if
 
-	}// End update
+	}// End Update()
 
 }// End class FadeMusic

@@ -5,82 +5,39 @@ using UnityEngine.UI;
 
 public class UserIsHit : MonoBehaviour {
 
-    //private int highScore;
-   // private HighScoreTable hst;
     private ScrollGameOverText sTxt;
     private FadeMusic fm;
     public GameObject explosion;
     public GameControl gc;
-
-    // Variables for audio
     public AudioClip playerDeathSound;
 
     // Use this for initialization
     void Start () {
 
+        // Find object with has the script ScrollGameOverText
         GameObject textScroll = GameObject.FindGameObjectWithTag("Finish");
 
+        // Get a reference to script ScrollGameOverText
         sTxt = textScroll.GetComponent<ScrollGameOverText>();
 
-        //// Find camera with script on it
+        // Find camera with script on it
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
 
-        //// Referenece to HighScoreTable script
-        //hst = camera.GetComponent<HighScoreTable>();
-
+        // Get reference to script FadeMusic
         fm = camera.GetComponent<FadeMusic>();
 
+        // Get reference to script GameControl
         gc = camera.GetComponent<GameControl>();
 
-        // Store high score for comparison
-        //highScore = PlayerPrefs.GetInt("Score9");
-
-    }// End Start
+    }// End Start()
 	
-	// Update is called once per frame
-	void Update () {
-
-	}
-
-
     // Triggers end of current session
     void OnCollisionEnter2D(Collision2D coll)
     {
 
         // If player collides with enemy
-        if (coll.gameObject.tag == "enemy" || coll.gameObject.tag == "enemy")
+        if (coll.gameObject.tag == "enemy")
         {
-
-        //    //If the high score is greater than the current sessions score
-        //    if (highScore > GameControl.score)
-        //    {
-        //        // Save score when player dies
-        //        PlayerPrefs.SetInt("High Score", highScore);
-        //    }
-        //    else if (highScore == GameControl.score) // High score was equaled but not beaten
-        //    {
-        //        // Save score when player dies
-        //        PlayerPrefs.SetInt("High Score", highScore);
-        //    }
-        //    else // New high score set so store the current sessions score
-        //    {
-
-        //        // Stores the high score
-        //        PlayerPrefs.SetInt("High Score", GameControl.score);
-
-        //    }
-
-        //    // Using normal array
-        //    var temp = HighScoreTable.saveHighScores[0];
-
-        //    // If current session score is greater than the smallest high score
-        //    if (GameControl.score > temp)
-        //    {
-
-        //        // pass current session score in get saved
-        //        hst.onDeathHighScore(GameControl.score);
-
-        //    }
 
             // Clone the explosion object at the position where the enemy is hit with the missile
             GameObject cloneExplosion = (GameObject)Instantiate(explosion, transform.position, Quaternion.identity);
@@ -97,15 +54,16 @@ public class UserIsHit : MonoBehaviour {
                 // Play audio clip at the postiton the object is destroyed
                 AudioSource.PlayClipAtPoint(playerDeathSound, transform.position);
 
-            }
+            }// End nested if
 
             // Tell ScrollGameOverText script that game is over
             isGameOver();
 
         }// End if
 
-    }// End OnCollisionEnter2D 
+    }// End OnCollisionEnter2D() 
  
+    // Set variables to a different state if game is over
     void isGameOver()
     {
 
@@ -116,6 +74,6 @@ public class UserIsHit : MonoBehaviour {
 
         gc.isDead = true;
 
-    }
+    }// End isGameOver()
 
 }// End class UserIsHit

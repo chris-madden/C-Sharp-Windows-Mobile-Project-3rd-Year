@@ -11,6 +11,7 @@ public class DisplayHighScore : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        // Display score
         currrentScore.text = GameControl.score.ToString();
 
         // Store high score in variable
@@ -19,11 +20,6 @@ public class DisplayHighScore : MonoBehaviour {
         // Show high score in UI
         highScoreText.text = highScore.ToString();
 
-	}
+	}// End Start()
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-}// End DisplayHighScore
+}// End class DisplayHighScore

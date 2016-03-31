@@ -9,7 +9,6 @@ public class InstantiateExtraMissiles : MonoBehaviour {
     Vector3 extraMissilePos;
 
     public float destroyExtraMissile = 2.3f;
-
     public float nextSpawn = 2f;
 
     // Time system
@@ -24,13 +23,16 @@ public class InstantiateExtraMissiles : MonoBehaviour {
         // Get state of time on main game start up
         startTime = Time.time;
 
-    }
+    }// End Start()
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+
         // The timeer starts at 0 when this scene is loaded up
         elapsedTime = Time.time - startTime;
-    }
+
+    }// Update()
 
     void spawnExtraMissile()
     {
@@ -59,7 +61,7 @@ public class InstantiateExtraMissiles : MonoBehaviour {
         while (true)
         {
 
-            // Less than 30 seconds
+            // Less than 60 seconds
             if (elapsedTime < 60)
             {
 
@@ -67,7 +69,7 @@ public class InstantiateExtraMissiles : MonoBehaviour {
 
             }
 
-            // Between 30 and 60 seconds
+            // Between 60 and 120 seconds
             if (elapsedTime > 60 && elapsedTime < 120)
             {
 
@@ -75,6 +77,7 @@ public class InstantiateExtraMissiles : MonoBehaviour {
 
             }
 
+            // Between 120 and 180 seconds
             if (elapsedTime > 120 && elapsedTime < 180)
             {
 
@@ -82,6 +85,7 @@ public class InstantiateExtraMissiles : MonoBehaviour {
 
             }
 
+            // Between 180 and 240 seconds
             if (elapsedTime > 180 && elapsedTime < 240)
             {
 
@@ -89,6 +93,7 @@ public class InstantiateExtraMissiles : MonoBehaviour {
 
             }
 
+            // Greater than 240 seconds
             if (elapsedTime > 240)
             {
                 nextSpawn = 1.5f;
@@ -101,6 +106,6 @@ public class InstantiateExtraMissiles : MonoBehaviour {
             yield return new WaitForSeconds(nextSpawn);
         }
 
-    }// End enemySpawn
+    }// End missileSpawn()
 
 }// End class InstantiateExtraMissiles

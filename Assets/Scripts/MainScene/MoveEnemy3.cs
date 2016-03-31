@@ -3,20 +3,19 @@ using System.Collections;
 
 public class MoveEnemy3 : MonoBehaviour {
 
-    public float speed = 5f, destroyMissileTime = 1.5f, nextSpawn = 2f;
-
-    private bool hitLeft = false;
-
     public GameObject enemyMisssile;
-
     public AudioClip fireMissileAudio;
+
+    public float speed = 5f, destroyMissileTime = 1.5f, nextSpawn = 2f;
+    private bool hitLeft = false;
 
 	// Use this for initialization
 	void Start () {
 
+        // Start calling the enemyFireMissile method
         StartCoroutine(enemyFireMissile(nextSpawn));
 	
-	}
+	}// End Start
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,12 +23,9 @@ public class MoveEnemy3 : MonoBehaviour {
         // Missile shoud move up once instantiated
         transform.position += transform.up * Time.deltaTime * (speed / 2);
 
-        // Enemy behaviour
+        // Enemy behaviour detects if left boundary was hit (Players left)
         if (transform.position.x >= -2 && hitLeft == false)
         {
-
-            // Fire Missiles here
-
 
             // Enemy moves to it's right (Players left)
             transform.position += transform.right * Time.deltaTime * (speed / 2);
@@ -40,10 +36,11 @@ public class MoveEnemy3 : MonoBehaviour {
 
                 hitLeft = true;
 
-            }
+            }// End nested if
 
-        }
+        }// End outer if
 
+        // Enemy behaviour detects if right boundary was hit (Players right)
         if (transform.position.x <= 2 && hitLeft == true)
         {
 
@@ -55,11 +52,11 @@ public class MoveEnemy3 : MonoBehaviour {
 
                 hitLeft = false;
 
-            }
+            }// End nested if
 
-        }// End if else
+        }// End outer if
 
-    }// End update
+    }// End Update()
 
     // Enemy will fire missiles
     IEnumerator enemyFireMissile(float nextSpawn)
@@ -92,6 +89,6 @@ public class MoveEnemy3 : MonoBehaviour {
 
         }// End while
 
-    }// End  enemyFireMissile(nextSpawn)
+    }// End enemyFireMissile()
 
 }// End class MoveEnemy3

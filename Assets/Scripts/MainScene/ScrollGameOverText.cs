@@ -4,17 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class ScrollGameOverText : MonoBehaviour {
 
-    // Game over text 
     public RectTransform gameOverTitle;
-
-    private float gameOver = 400, centerScreen = 0;
-
-    public bool isGameOver = false;
-
-    private int highScore;
-
     private HighScoreTable hst;
 
+    private float gameOver = 400, centerScreen = 0;
+    public bool isGameOver = false;
+    private int highScore;
     private int stop;
 
     // Use this for initialization
@@ -35,14 +30,13 @@ public class ScrollGameOverText : MonoBehaviour {
         // Store high score for comparison
         highScore = PlayerPrefs.GetInt("Score9");
 
+        // Initialise stop to 0
         stop = 0;
 
-    }
+    }// End Start()
 	
 	// Update is called once per frame
 	void Update () {
-
-       
 
         if (isGameOver == true && stop == 0)
         {
@@ -53,7 +47,7 @@ public class ScrollGameOverText : MonoBehaviour {
             // Stops method from being called more than once
             stop = 1;
 
-        }
+        }// End if
 
         // isGameOver set to true when player is killed
         if (isGameOver == true && gameOver > centerScreen)
@@ -65,13 +59,15 @@ public class ScrollGameOverText : MonoBehaviour {
             // Reposition game over text
             gameOverTitle.anchoredPosition = new Vector2(gameOver, 0);
 
-        }
+        }// End if
 
         // when text hits center of screen load the game over scene
         if (gameOver <= centerScreen)
         {
+
             loadGameOverScene();
-        }
+
+        }// End if
 
     }// End update
 
@@ -113,7 +109,7 @@ public class ScrollGameOverText : MonoBehaviour {
             // Stores the high score
             PlayerPrefs.SetInt("High Score", GameControl.score);
 
-        }
+        }// End if/else
 
         // Using normal array
         var temp = HighScoreTable.saveHighScores[0];
@@ -125,8 +121,8 @@ public class ScrollGameOverText : MonoBehaviour {
             // pass current session score in get saved
             hst.onDeathHighScore(GameControl.score);
 
-        }
+        }// End if
 
-    }
+    }// End saveHighScore()
 
 }// End class ScrollGameOverText
