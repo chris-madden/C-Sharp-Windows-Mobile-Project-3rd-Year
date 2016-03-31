@@ -55,5 +55,8 @@ References
 #####Links
 * https://www.assetstore.unity3d.com
 
-####Font
+####Font name
+* Glametrix
+
+#####Links
 * http://www.fontspace.com/category/Geometrical?p=2
