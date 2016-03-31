@@ -11,11 +11,9 @@ public class ReloadGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        // Code used for testing local storage on device that had scored saved from a previous build
-        //PlayerPrefs.DeleteAll();
-
         source = GetComponent<AudioSource>();
 
+        // Set volume of background music
         source.volume = 0.3f;
 
     }
@@ -63,8 +61,6 @@ public class ReloadGame : MonoBehaviour {
     // Plays audio for button clicks
     public void playUISound()
     {
-
-        //AudioSource.PlayClipAtPoint(uiSound, transform.position);
 
         source.PlayOneShot(uiSound);
 

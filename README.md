@@ -11,9 +11,6 @@ Publisher
 =========
 GamerYou
 
-Explosion found at
-==================
-http://gintasdx.deviantart.com/art/Explosion-spritesheet-for-games-347785133
 
 Audio Reference
 ===============
