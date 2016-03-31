@@ -1,4 +1,9 @@
-# C-Sharp-Windows-Mobile-Project
+C-Sharp-Windows-Mobile-Project
+==============================
+
+Name
+----
+Christy Madden
 
 Art Assets Reference 
 ====================
