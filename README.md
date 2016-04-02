@@ -1,51 +1,6 @@
 C-Sharp-Windows-Mobile-Project
-------------------------------
+==============================
 
-<<<<<<< HEAD
-###Name
-Christy Madden
-
-Art Assets Reference 
-====================
-
-Space ships found at
-====================
-https://www.assetstore.unity3d.com/en/#!/content/20719
-
-Publisher
-=========
-GamerYou
-
-
-Audio Reference
-===============
-
-Sound Effects by
-================
-Dustyroom Game Studio
-Bleep Blop Audio
-Strange Pulse Studio
-
-Found at
-=========
-https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=relevance/query=casual&game&sounds
-http://www.bleepblopaudio.com/
-http://strangepulsestudio.blogspot.ie/
-
-Music by
-========
-Vertex Studio
-Bleep Blop Audio
-
-Found at
-========
-https://www.assetstore.unity3d.com/en/#!/content/4883
-
-Fonts from
-==========
-http://www.fontspace.com/category/Geometrical?p=2
-
-=======
 ####Name
 Christy Madden  
 
@@ -105,4 +60,3 @@ References
 
 #####Links
 * http://www.fontspace.com/category/Geometrical?p=2
->>>>>>> 648b068d99ab39f64d8613cb8593ce3f8cfe41fa
