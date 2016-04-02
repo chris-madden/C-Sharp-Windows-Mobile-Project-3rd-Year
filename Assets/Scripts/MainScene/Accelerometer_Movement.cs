@@ -41,7 +41,20 @@ public class Accelerometer_Movement : MonoBehaviour {
         //Accelerometer movement on x axis.
         transform.Translate(Vector3.right * Input.acceleration.x, Space.World);
 
+        //======================================================================
+        // Keyboard controls, either left and right arrow or A and D keys for 
+        // movement on the X axis
+        // =====================================================================
 
+        // Store horizontal movement in variable 
+        float translation = Input.GetAxis("Horizontal") * speed;
+
+        // mulitply it by deltaTime
+        translation *= Time.deltaTime;
+
+        // Move ship on the x axis
+        transform.Translate(translation, 0, 0);
+           
     }// End update
 
 }// End class Accelerometer_Movement
