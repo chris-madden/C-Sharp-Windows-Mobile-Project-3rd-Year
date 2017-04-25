@@ -1,13 +1,13 @@
 C-Sharp-Windows-Mobile-Project
 ==============================
 
-####Name
+#### Name
 Christy Madden  
 
-####Game Title
+#### Game Title
 Shoot Die Repeat
 
-####Game/Project Details
+#### Game/Project Details
 * Arcade style space shooter
 * Aim of the game is get a high score
 * High score achieved by shooting the enemy spaceships
@@ -18,7 +18,7 @@ Shoot Die Repeat
 * You can share your high score on Twitter by pressing the share button
 * The player controls their spaceship by using the devices accelerometer
 
-####Extra Details
+#### Extra Details
 * Game runs in portrait mode as it provides the best playing experience
 * If the device does not have an accelerometer a message pops up on the start screen
   * Message is in a custom styled button which can be pressed to remove the message
@@ -32,31 +32,31 @@ Shoot Die Repeat
 References
 -----------
 
-####Sound Effects by
+#### Sound Effects by
 * Dustyroom Game Studio
 * Bleep Blop Audio
 * Strange Pulse Studio
 
-#####Links
+##### Links
 * https://www.assetstore.unity3d.com/en/#!/search/page=1/sortby=relevance/query=casual&game&sounds
 * http://www.bleepblopaudio.com/
 * http://strangepulsestudio.blogspot.ie/
 
-####Art by
+#### Art by
 * GamerYou
 
-#####Links
+##### Links
 * https://www.assetstore.unity3d.com
 
-####Music by
+#### Music by
 * Vertex Studio
 * Bleep Blop Audio
 
-#####Links
+##### Links
 * https://www.assetstore.unity3d.com
 
-####Font name
+#### Font name
 * Glametrix
 
-#####Links
+##### Links
 * http://www.fontspace.com/category/Geometrical?p=2
